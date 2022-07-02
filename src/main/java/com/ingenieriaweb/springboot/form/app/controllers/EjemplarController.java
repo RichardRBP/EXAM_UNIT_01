@@ -15,7 +15,7 @@ import com.ingenieriaweb.springboot.form.app.models.domain.Ejemplar;
 public class EjemplarController {
 	@GetMapping({ "/ejemplar" }) 
 	public String ejemplarIndex(Model model) {
-		Ejemplar ejemplar = new Ejemplar();
+		Ejemplar ejemplar = new Ejemplar(null, null, null);
 		model.addAttribute("titulo", "EXAMEN INGENIERIA WEB");
 		model.addAttribute("ejemplar", ejemplar);
 		return "ejemplar/index";

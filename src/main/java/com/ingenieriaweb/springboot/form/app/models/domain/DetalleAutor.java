@@ -4,6 +4,9 @@ public class DetalleAutor {
 
 	private Autor autor;
 
+	public DetalleAutor(Autor autor) {
+	}
+
 	public Autor getAutor() {
 		return autor;
 	}
