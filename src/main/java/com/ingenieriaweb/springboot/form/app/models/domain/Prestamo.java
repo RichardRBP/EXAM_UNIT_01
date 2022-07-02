@@ -1,9 +1,14 @@
 package com.ingenieriaweb.springboot.form.app.models.domain;
 
+import javax.validation.constraints.NotEmpty;
+
 public class Prestamo {
 
+	
 	private Ejemplar ejemplar;
+	@NotEmpty
 	private String fechaPrestamo;
+	@NotEmpty
 	private String fechaDevolucion;
 	
 	
