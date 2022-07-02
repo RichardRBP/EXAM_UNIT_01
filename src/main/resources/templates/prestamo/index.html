@@ -2,7 +2,7 @@
 <html xmlns:th="http://thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"> </link>
+   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"> </link> <!-- -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 <title    ></title>
@@ -16,23 +16,38 @@
         </div>
     </div>
     <br>
-    <form th:action="@{/app/prestamo}" th:object="${prestamo}" method="post">
+    <form th:action="@{/app/prestamo}" th:object="${prestamo}" method="post"  >
         <div class="row">
             <div class="col-12 col-md-6">
                 <label class="input-group-text" for="usuario" >Usuario</label>
             </div>      
             <div class="col-12 col-md-6">
-                <input class="form-control" type="text" id="usuario" > <!-- th:field="*{usuario}" -->
+                <div class="form-group">
+                    <select class="form-select"  id="usuario"  >
+                        <option selected disabled>seleccione un usuario</option>
+                        <option th:each="usuario :${usuarios}" th:value="${usuario.codigoUsuario}" th:text="${usuario.nombre}"> </option>
+                     
+                    </select>
+                </div>
+                <!--<input class="form-control" type="text" id="usuario" >  th:field="*{usuario}" -->
             </div>
-          <!--   <div th:if="${#fields.hasErrors('usuario')}" th:errors="*{usuario}"></div> -->
+          <!--   <div th:if="${#fields.hasErrors('usuario')}" th:errors="*{usuario}"></div>    th:field="${libro.DetalleAutor}" th:each="course :${listaLibros}" th:value="${libro.codigoLibro}" th:text="${libro.titulo}"-->
         </div>
+         
+          
         <br>
         <div class="row">
             <div class="col-12 col-md-6">
                 <label class="input-group-text" for="libro">Libro</label>
             </div>
             <div class="col-12 col-md-6">
-                <input class="form-control" type="text" id="Libro"> <!--  th:field="*{Libro}" -->
+                <select class="form-select" id="libro"    >
+                    <option selected disabled>seleccione un Libro</option>
+                    <option th:each="libro :${libros}" th:value="${libro.codigoLibro}" th:text="${libro.titulo}"> </option>
+                     
+                </select>
+                
+               <!-- <input class="form-control" type="text" id="libro">   th:field="*{Libro}" -->
             </div>
             <!--  <div th:if="${#fields.hasErrors('Libro')}" th:errors="*{Libro}"></div>-->
         </div>
@@ -42,7 +57,12 @@
                 <label class="input-group-text" for="ejemplar">ejemplar</label>
             </div>
             <div class="col-12 col-md-6">
-                <input class="form-control" type="text" id="ejemplar" > <!-- th:field="*{ejemplar}" -->
+                <select class="form-select"  id="ejemplar"   >
+                    <option selected disabled>seleccione un Ejemplar</option>
+                    <option th:each="ejemplar :${ejemplares}" th:value="${ejemplar.codigoEjemplar}" th:text="${ejemplar.localizacion}"> </option>
+                    <option value="ejemplar3">ejemplar3</option>
+                </select>
+              <!--    <input class="form-control" type="text" id="ejemplar" >th:field="*{ejemplar}" -->
             </div>
            <!-- <div th:if="${#fields.hasErrors('ejemplar')}" th:errors="*{ejemplar}"></div> -->
         </div>
@@ -54,7 +74,8 @@
             <div class="col-12 col-md-6">
                 <input  class="form-control" type="date" id="fechaPrestamo" th:field="*{fechaPrestamo}" >
             </div>
-            <div th:if="${#fields.hasErrors('fechaPrestamo')}" th:errors="*{fechaPrestamo}"></div>
+            <div class="col-12 col-md-6"></div>
+            <div th:if="${#fields.hasErrors('fechaPrestamo')}" th:errors="*{fechaPrestamo}" style="color: aliceblue;" class="col-12 col-md-6"></div>
         </div>
         <br>
         <div class="row">
@@ -64,7 +85,8 @@
             <div class="col-12 col-md-6">
                 <input class="form-control" type="date"  id="fechaDevolucion" th:field="*{fechaDevolucion}">
             </div>
-            <div th:if="${#fields.hasErrors('fechaDevolucion')}" th:errors="*{fechaDevolucion}"></div>
+            <div class="col-12 col-md-6"></div>
+            <div th:if="${#fields.hasErrors('fechaDevolucion')}" th:errors="*{fechaDevolucion}" style="color: aliceblue;" class="col-12 col-md-6"></div>
         </div>
         <br>
         <div class="row">

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Usuario {
 
 	//private String codigoUsuario;
+	private String codigoUsuario;
 	private String nombre;
 	private String direccion;
 	private String telefono;
@@ -20,7 +21,7 @@ public class Usuario {
 	public String getNombre() {
 		return nombre;
 	}
-	public Usuario(String nombre, String direccion, String telefono, List<Prestamo> item) {
+	public Usuario(String codigoUsuario,String nombre, String direccion, String telefono, List<Prestamo> item) {
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.telefono = telefono;
@@ -46,6 +47,12 @@ public class Usuario {
 	}
 	public void setItem(List<Prestamo> item) {
 		Item = item;
+	}
+	public String getCodigoUsuario() {
+		return codigoUsuario;
+	}
+	public void setCodigoUsuario(String codigoUsuario) {
+		this.codigoUsuario = codigoUsuario;
 	}
 	
 	
