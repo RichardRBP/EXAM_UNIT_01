@@ -1,7 +1,10 @@
 package com.ingenieriaweb.springboot.form.app.models.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class DetalleAutor {
 
+	@Autowired
 	private Autor autor;
 
 	public DetalleAutor(Autor autor) {

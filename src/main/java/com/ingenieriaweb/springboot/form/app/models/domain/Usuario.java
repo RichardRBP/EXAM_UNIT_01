@@ -2,19 +2,29 @@ package com.ingenieriaweb.springboot.form.app.models.domain;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Usuario {
 
 	//private String codigoUsuario;
 	private String nombre;
 	private String direccion;
 	private String telefono;
+	@Autowired
 	List<Prestamo>Item;
 	
 	
-	public Usuario(String nombre, String direccion, String telefono) {
-	}
+	//public Usuario(String nombre, String direccion, String telefono) {
+	//}
+
 	public String getNombre() {
 		return nombre;
+	}
+	public Usuario(String nombre, String direccion, String telefono, List<Prestamo> item) {
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		Item = item;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;

@@ -2,8 +2,11 @@ package com.ingenieriaweb.springboot.form.app.models.domain;
 
 import javax.validation.constraints.NotEmpty;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Ejemplar {
 
+	@Autowired
 	private Libro libro;
 	@NotEmpty
 	private String codigoEjemplar;
