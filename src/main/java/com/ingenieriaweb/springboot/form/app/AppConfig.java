@@ -24,6 +24,7 @@ public class AppConfig {
     @Bean("Autor")
     public static List<Autor> registrarA(){
         Autor autor1 = new Autor("A01","juan jose perez");
+
         Autor autor2 = new Autor("02","carlos mendez");
     return Arrays.asList(autor1,autor2);
     }
@@ -32,6 +33,7 @@ public class AppConfig {
     public static List<DetalleAutor> listaAutores(){
         Autor autor1 = new Autor("A01","juan jose perez");
         Autor autor2 = new Autor("02","carlos mendez");
+
         DetalleAutor detAut1= new DetalleAutor(autor1);
         DetalleAutor detAut2= new DetalleAutor(autor2);
     return Arrays.asList(detAut1,detAut2);
