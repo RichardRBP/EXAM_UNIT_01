@@ -2,6 +2,8 @@ package com.ingenieriaweb.springboot.form.app.models.domain;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Libro {
 
 	//private DetalleAutor detalleAutor;
@@ -10,14 +12,26 @@ public class Libro {
 	private String isbn;
 	private String editorial;
 	private Integer nroPaginas;
+	@Autowired
 	List<DetalleAutor>Item;
 
 	
-	public Libro(String codigoLibro, String titulo, String isbn, String editorial, int nroPaginas) {
-	}
+	//public Libro(String codigoLibro, String titulo, String isbn, String editorial, int nroPaginas) {
+	//}
 
+	
 	public String getCodigoLibro() {
 		return codigoLibro;
+	}
+
+	public Libro(String codigoLibro, String titulo, String isbn, String editorial, Integer nroPaginas,
+			List<DetalleAutor> item) {
+		this.codigoLibro = codigoLibro;
+		this.titulo = titulo;
+		this.isbn = isbn;
+		this.editorial = editorial;
+		this.nroPaginas = nroPaginas;
+		Item = item;
 	}
 
 	public void setCodigoLibro(String codigoLibro) {

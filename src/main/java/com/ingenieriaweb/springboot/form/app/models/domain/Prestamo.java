@@ -2,9 +2,11 @@ package com.ingenieriaweb.springboot.form.app.models.domain;
 
 import javax.validation.constraints.NotEmpty;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Prestamo {
 
-	
+	@Autowired
 	private Ejemplar ejemplar;
 	@NotEmpty
 	private String fechaPrestamo;
