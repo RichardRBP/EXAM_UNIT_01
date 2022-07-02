@@ -17,9 +17,9 @@ public class UserController {
 	
 	@GetMapping("/usuario")
 	public String usuarioIndex(Model model) {
-		Usuario usuario = new Usuario(null, null, null);
+//		Usuario usuario = new Usuario(null, null, null);
 		model.addAttribute("titulo", "Formulario de Usuarios");
-		model.addAttribute("usuario",usuario);
+//		model.addAttribute("usuario",usuario);
 		return "usuario/index";
 	}
 	
