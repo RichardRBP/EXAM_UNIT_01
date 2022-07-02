@@ -1,9 +1,13 @@
 package com.ingenieriaweb.springboot.form.app.models.domain;
 
+import javax.validation.constraints.NotEmpty;
+
 public class Ejemplar {
 
 	private Libro libro;
+	@NotEmpty
 	private String codigoEjemplar;
+	@NotEmpty
 	private String localizacion;
 	
 	
