@@ -21,7 +21,7 @@ public class PrestamoController {
     
 	@GetMapping({ "/prestamo" }) // importo-ruta entre llaves de index
 	public String prestamoIndex(Model model) {
-		Prestamo prestamo = new Prestamo();
+		Prestamo prestamo = new Prestamo(null, null, null);
 		model.addAttribute("titulo", "EXAMEN INGENIERIA WEB");
 		model.addAttribute("prestamo", prestamo);
 		return "prestamo/index";

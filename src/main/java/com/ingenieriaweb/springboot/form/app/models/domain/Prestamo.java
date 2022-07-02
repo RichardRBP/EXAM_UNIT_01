@@ -11,6 +11,9 @@ public class Prestamo {
 	@NotEmpty
 	private String fechaDevolucion;
 	
+	 
+	public Prestamo(Ejemplar ejemplar, String fechaPrestamo, String fechaDevolucion) {
+	}
 	public Ejemplar getEjemplar() {
 		return ejemplar;
 	}

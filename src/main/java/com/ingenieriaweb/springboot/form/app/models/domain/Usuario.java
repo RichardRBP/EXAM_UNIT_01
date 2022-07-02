@@ -11,6 +11,8 @@ public class Usuario {
 	List<Prestamo>Item;
 	
 	
+	public Usuario(String nombre, String direccion, String telefono) {
+	}
 	public String getNombre() {
 		return nombre;
 	}

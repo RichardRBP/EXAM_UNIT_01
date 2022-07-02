@@ -7,7 +7,10 @@ public class Ejemplar {
 	private String localizacion;
 	
 	
-	public Libro getLibro() {
+	 
+    public Ejemplar(Libro libro, String codigoEjemplar, String localizacion) {
+    }
+    public Libro getLibro() {
 		return libro;
 	}
 	public void setLibro(Libro libro) {

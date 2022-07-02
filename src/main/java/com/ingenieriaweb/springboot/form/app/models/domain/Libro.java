@@ -13,6 +13,9 @@ public class Libro {
 	List<DetalleAutor>Item;
 
 	
+	public Libro(String codigoLibro, String titulo, String isbn, String editorial, int nroPaginas) {
+	}
+
 	public String getCodigoLibro() {
 		return codigoLibro;
 	}
