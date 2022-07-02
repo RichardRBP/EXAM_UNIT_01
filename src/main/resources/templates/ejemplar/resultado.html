@@ -3,13 +3,21 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"> </link>
-<title  th:text=${$titulo} ></title>
+<title th:text=${$titulo} ></title>
 </head>
 <body>
-    <h1  th:text=${titulo}> </h1> 
-    <ul>
-        <li th:text="${ejemplar.codigoEjemplar}"></li>
-        <li th:text="${ejemplar.localizacion}"></li>
-    </ul>
+    <h1  style="color:aliceblue" th:text=${titulo}> </h1> 
+    <div>
+        <label style="color:aliceblue" class="input-group-text" for="codigoEjemplar">CODIGO:</label>
+    	<div>
+        	<li style="color:aliceblue" th:text="${ejemplar.codigoEjemplar}"></li>
+    	</div>
+    </div>
+    <div>
+        <label style="color:aliceblue" class="input-group-text" for="codigoEjemplar">LOCALIZACION:</label>
+        <div>
+        	<li style="color:aliceblue" th:text="${ejemplar.localizacion}"></li>
+    	</div>
+    </div>
 </body>
 </html>

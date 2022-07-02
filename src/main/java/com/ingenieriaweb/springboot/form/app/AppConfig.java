@@ -19,7 +19,6 @@ public class AppConfig {
     @Bean("itemsAutor")
     public List<DetalleAutor> registrarItemsA(){
         Autor autor1 = new Autor("A01","juan jose perez");
-       // Autor autor2 = new Autor("02","carlos mendez");
         DetalleAutor detAut1= new DetalleAutor(autor1);
         DetalleAutor detAut2= new DetalleAutor(autor1);
     return Arrays.asList(detAut1,detAut2);
