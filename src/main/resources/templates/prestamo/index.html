@@ -26,7 +26,6 @@
                     <select class="form-select"  id="usuario"  >
                         <option selected disabled>seleccione un usuario</option>
                         <option th:each="usuario :${usuarios}" th:value="${usuario.codigoUsuario}" th:text="${usuario.nombre}"> </option>
-                     
                     </select>
                 </div>
                 <!--<input class="form-control" type="text" id="usuario" >  th:field="*{usuario}" -->

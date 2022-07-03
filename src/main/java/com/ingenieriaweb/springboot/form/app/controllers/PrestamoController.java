@@ -31,7 +31,6 @@ public class PrestamoController {
 		return "prestamo/index";
 	}
 	
-	
 
 	@PostMapping({"/app/prestamo"})
 	public String procesar(@Valid Prestamo prestamo,BindingResult result , Model model    ) {

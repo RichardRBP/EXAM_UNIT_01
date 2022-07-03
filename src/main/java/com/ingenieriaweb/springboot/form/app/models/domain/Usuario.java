@@ -28,18 +28,15 @@ public class Usuario {
 		return nombre;
 	}
 
-//	public Usuario(String nombre, String direccion, String telefono, List<Prestamo> item) {
-//		this.nombre = nombre;
-//		this.direccion = direccion;
-//		this.telefono = telefono;
-//		Item = item;
-//	}
-
 	public Usuario(String codigoUsuario, String nombre, String direccion, String telefono, List<Prestamo> item) {
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.telefono = telefono;
 		Item = item;
+	}
+
+	public Usuario() {
+		super();
 	}
 
 	public void setNombre(String nombre) {

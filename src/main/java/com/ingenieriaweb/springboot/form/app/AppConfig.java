@@ -66,12 +66,6 @@ public class AppConfig {
     return Arrays.asList(prestamo1,prestamo2);
     }
 
-//    @Bean("Usuario")
-//    public List<Usuario> listaUsuarios(){
-//    Usuario usuario1= new Usuario("leandro","av los laureles","953168423", listaPrestamos());
-//    
-//    return Arrays.asList(usuario1);
-//    }
     
     @Bean("Usuario")
     public static List<Usuario> listaUsuarios(){
