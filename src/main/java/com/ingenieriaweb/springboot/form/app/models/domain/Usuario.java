@@ -10,6 +10,9 @@ import org.springframework.stereotype.Component;
 public class Usuario {
 
 	@NotEmpty
+	private String codigoUsuario;
+
+	@NotEmpty
 	private String nombre;
 
 	@NotEmpty
@@ -17,22 +20,28 @@ public class Usuario {
 
 	@NotEmpty
 	private String telefono;
-	
+
 	@Autowired
-	List<Prestamo>Item;
-	
+	List<Prestamo> Item;
 
 	public String getNombre() {
 		return nombre;
 	}
-	
+
 //	public Usuario(String nombre, String direccion, String telefono, List<Prestamo> item) {
 //		this.nombre = nombre;
 //		this.direccion = direccion;
 //		this.telefono = telefono;
 //		Item = item;
 //	}
-	
+
+	public Usuario(String codigoUsuario, String nombre, String direccion, String telefono, List<Prestamo> item) {
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		Item = item;
+	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -59,6 +68,14 @@ public class Usuario {
 
 	public void setItem(List<Prestamo> item) {
 		Item = item;
+	}
+
+	public String getCodigoUsuario() {
+		return codigoUsuario;
+	}
+
+	public void setCodigoUsuario(String codigoUsuario) {
+		this.codigoUsuario = codigoUsuario;
 	}
 
 }

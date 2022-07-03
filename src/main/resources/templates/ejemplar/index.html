@@ -8,21 +8,21 @@
 <title></title>
 </head>
 <body>
-<h1  th:text=${titulo}> </h1>
+<h1  style="color:aliceblue" th:text=${titulo}> </h1>
     <form th:action="@{/app/ejemplar}" th:object="${ejemplar}" method="post">
         <div>
             <label class="input-group-text" for="codigoEjemplar">CODIGO</label>
             <div>
                 <input class="form-control" type="text"  id="codigoEjemplar" th:field="*{codigoEjemplar}">
             </div>
-            <div th:if="${#fields.hasErrors('codigoEjemplar')}" th:errors="*{codigoEjemplar}"></div>
+            <div style="color:aliceblue" th:if="${#fields.hasErrors('codigoEjemplar')}" th:errors="*{codigoEjemplar}"></div>
         </div>
         <div>
             <label class="input-group-text" for="localizacion">LOCALIZACION</label>
             <div>
                 <input class="form-control" type="text"  id="localizacion" th:field="*{localizacion}">
             </div>
-            <div th:if="${#fields.hasErrors('localizacion')}" th:errors="*{localizacion}"></div>
+            <div style="color:aliceblue" th:if="${#fields.hasErrors('localizacion')}" th:errors="*{localizacion}"></div>
         </div>
         <div>
             <label class="input-group-text" for="libro">LIBRO</label>

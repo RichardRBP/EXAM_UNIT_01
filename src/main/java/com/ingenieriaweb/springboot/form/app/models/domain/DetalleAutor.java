@@ -7,7 +7,10 @@ public class DetalleAutor {
 	@Autowired
 	private Autor autor;
 
+	 
+
 	public DetalleAutor(Autor autor) {
+		this.autor = autor;
 	}
 
 	public Autor getAutor() {

@@ -5,7 +5,10 @@ public class Autor {
 	private String codigoAutor;
 	private String nombre;
 	
+	 
 	public Autor(String codigoAutor, String nombre) {
+		this.codigoAutor = codigoAutor;
+		this.nombre = nombre;
 	}
 	public String getCodigoAutor() {
 		return codigoAutor;

@@ -1,7 +1,5 @@
 package com.ingenieriaweb.springboot.form.app.models.domain;
-
 import javax.validation.constraints.NotEmpty;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Prestamo {
@@ -14,7 +12,11 @@ public class Prestamo {
 	private String fechaDevolucion;
 	
 	 
-	public Prestamo(Ejemplar ejemplar, String fechaPrestamo, String fechaDevolucion) {
+	 
+	public Prestamo(Ejemplar ejemplar, @NotEmpty String fechaPrestamo, @NotEmpty String fechaDevolucion) {
+		this.ejemplar = ejemplar;
+		this.fechaPrestamo = fechaPrestamo;
+		this.fechaDevolucion = fechaDevolucion;
 	}
 	public Ejemplar getEjemplar() {
 		return ejemplar;
