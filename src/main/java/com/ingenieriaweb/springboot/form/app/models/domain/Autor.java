@@ -1,8 +1,12 @@
 package com.ingenieriaweb.springboot.form.app.models.domain;
 
+import javax.validation.constraints.NotEmpty;
+
 public class Autor {
 
+	@NotEmpty
 	private String codigoAutor;
+	@NotEmpty
 	private String nombre;
 	
 	 

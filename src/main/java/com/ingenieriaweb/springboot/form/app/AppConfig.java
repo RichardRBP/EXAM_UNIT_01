@@ -16,8 +16,8 @@ import com.ingenieriaweb.springboot.form.app.models.domain.Usuario;
 @Configuration
 public class AppConfig {
 
-    @Bean("Autor")
-    public static List<Autor> registrarA(){
+    @Bean("Autores")
+    public static List<Autor> listaAutor(){
         Autor autor1 = new Autor("A01","juan jose perez");
         Autor autor2 = new Autor("02","carlos mendez");
     return Arrays.asList(autor1,autor2);
