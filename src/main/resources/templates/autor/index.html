@@ -31,8 +31,9 @@
 					<input class="form-control" type="text" id="codigoAutor"
 						th:field="*{codigoAutor}">
 				</div>
+				<div class="col-12 col-md-6"></div>
 				<div th:if="${#fields.hasErrors('codigoAutor')}"
-					th:errors="*{codigoAutor}" style="color: aliceblue;"></div>
+					th:errors="*{codigoAutor}" style="color: aliceblue;" class="col-12 col-md-6"></div>
 			</div>
 			<br>
 			<div class="row">
@@ -43,7 +44,8 @@
 					<input class="form-control" type="text" id="nombre"
 						th:field="*{nombre}">
 				</div>
-				<div th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" style="color: aliceblue;"></div>
+				<div class="col-12 col-md-6"></div>
+				<div th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" style="color: aliceblue;" class="col-12 col-md-6"></div>
 			</div>
 			<br>
 			 

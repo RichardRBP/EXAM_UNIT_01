@@ -26,7 +26,7 @@ public class AppConfig {
     @Bean("itemsAutor")
     public static List<DetalleAutor> listaAutores(){
         Autor autor1 = new Autor("A01","juan jose perez");
-        Autor autor2 = new Autor("02","carlos mendez");
+        Autor autor2 = new Autor("A02","carlos mendez");
 
         DetalleAutor detAut1= new DetalleAutor(autor1);
         DetalleAutor detAut2= new DetalleAutor(autor2);

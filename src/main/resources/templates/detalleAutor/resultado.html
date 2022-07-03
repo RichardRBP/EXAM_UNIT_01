@@ -10,13 +10,11 @@
 <body>
   <div class="container">
     <div class="form">
-      <br>
       <div class="row">
         <div class="col" style="text-align: center;">
           <h1  th:text=${titulo} style="color: aliceblue;"> </h1> </h1>
         </div>
       </div>
-      
       <div class="row">
         <table class="table table-striped">
           <thead style="color: aliceblue;">
@@ -24,20 +22,19 @@
           </thead>
           <tbody >
             <tr >
-              <td style="color: aliceblue;">LIBRO :</td>
-              <td  th:text="${ejemplar.libro}" style="color: aliceblue;"> </td>
+              <td style="color: hsl(208, 100%, 97%);">Libro :</td>
+              <td    style="color: aliceblue;"> </td>
             </tr >
             <tr >
-              <td style="color: aliceblue;">CODIGO :</td>
-              <td th:text="${ejemplar.codigoEjemplar}" style="color: aliceblue;"> </td>
+              <td style="color: aliceblue;">Autor :</td>
+              <td   style="color: aliceblue;"> </td>
             </tr>
-            <tr >
-              <td style="color: aliceblue;">LOCALIZACION :</td>
-              <td th:text="${ejemplar.localizacion}" style="color: aliceblue;"> </td>
-            </tr>
+             
+
             
           </tbody>
         </table>
+         
       </div>
     </div>
   </div>

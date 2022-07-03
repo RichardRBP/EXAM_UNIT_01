@@ -18,7 +18,7 @@ public class EjemplarController {
 	@GetMapping({ "/ejemplar" }) 
 	public String ejemplarIndex(Model model) {
 		Ejemplar ejemplar = new Ejemplar(null, null, null);
-		model.addAttribute("titulo", "EXAMEN INGENIERIA WEB");
+		model.addAttribute("titulo", "Formulario de Ejemplar");
 		model.addAttribute("ejemplar", ejemplar);
 		model.addAttribute("libros",AppConfig.listaLibros());
 		return "ejemplar/index";

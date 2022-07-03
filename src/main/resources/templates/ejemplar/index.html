@@ -8,23 +8,43 @@
 <title></title>
 </head>
 <body>
-<h1  style="color:aliceblue" th:text=${titulo}> </h1>
+  
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col" style="text-align: center;">
+            <h1 th:text=${titulo} style="color: aliceblue;"></h1>
+            </h1>
+        </div>
+    </div>
+    <br>
 
     <form th:action="@{/app/ejemplar}" th:object="${ejemplar}" method="post">
-        <div>
-            <label class="input-group-text" for="codigoEjemplar">CODIGO</label>
-            <div>
-                <input class="form-control" type="text"  id="codigoEjemplar" th:field="*{codigoEjemplar}">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <label class="input-group-text" for="codigoEjemplar">Código</label>
             </div>
-            <div style="color:aliceblue" th:if="${#fields.hasErrors('codigoEjemplar')}" th:errors="*{codigoEjemplar}"></div>
-        </div>
-        <div>
-            <label class="input-group-text" for="localizacion">LOCALIZACION</label>
-            <div>
-                <input class="form-control" type="text"  id="localizacion" th:field="*{localizacion}">
+            <div class="col-12 col-md-6">
+                <input class="form-control" type="text" id="codigoEjemplar"
+                    th:field="*{codigoEjemplar}">
             </div>
-            <div style="color:aliceblue" th:if="${#fields.hasErrors('localizacion')}" th:errors="*{localizacion}"></div>
+            <div class="col-12 col-md-6"></div>
+            <div th:if="${#fields.hasErrors('codigoEjemplar')}"
+                th:errors="*{codigoEjemplar}" style="color: aliceblue;" class="col-12 col-md-6"></div>
         </div>
+        <br>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <label class="input-group-text" for="localizacion">Localizacion</label>
+            </div>
+            <div class="col-12 col-md-6">
+                <input class="form-control" type="text" id="localizacion"
+                    th:field="*{localizacion}">
+            </div>
+            <div class="col-12 col-md-6"></div>
+            <div th:if="${#fields.hasErrors('localizacion')}" th:errors="*{localizacion}" style="color: aliceblue;" class="col-12 col-md-6"></div>
+        </div>
+        <br>
         <div class="row">
             <div class="col-12 col-md-6">
                 <label class="input-group-text" for="libro">Libro</label>
@@ -37,13 +57,15 @@
             </div>
         </div>
         <br>
-        <div>
-            <div>
-                <input class="btn btn-primary" type="submit" value="enviar" id="submit" /> 
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4" style="text-align: center;">
+                <input class="btn btn-outline-success" type="submit" value="enviar"
+                    id="submit" />
             </div>
         </div>
     </form>
-
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

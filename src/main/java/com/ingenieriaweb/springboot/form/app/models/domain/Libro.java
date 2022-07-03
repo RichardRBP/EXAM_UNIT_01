@@ -2,24 +2,26 @@ package com.ingenieriaweb.springboot.form.app.models.domain;
 
 import java.util.List;
 
+import javax.validation.constraints.NotEmpty;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Libro {
 
 	//private DetalleAutor detalleAutor;
+	@NotEmpty
 	private String codigoLibro;
+	@NotEmpty
 	private String titulo;
+	@NotEmpty
 	private String isbn;
+	@NotEmpty
 	private String editorial;
+	@NotEmpty
 	private Integer nroPaginas;
 	@Autowired
 	List<DetalleAutor>Item;
-
-	
-	//public Libro(String codigoLibro, String titulo, String isbn, String editorial, int nroPaginas) {
-	//}
-
-	
+ 
 	public String getCodigoLibro() {
 		return codigoLibro;
 	}
