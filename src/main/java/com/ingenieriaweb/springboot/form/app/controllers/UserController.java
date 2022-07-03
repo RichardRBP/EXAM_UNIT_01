@@ -2,6 +2,7 @@ package com.ingenieriaweb.springboot.form.app.controllers;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,11 +16,13 @@ import com.ingenieriaweb.springboot.form.app.models.domain.Usuario;
 @RequestMapping({"/app","/",""})
 public class UserController {
 	
+	@Autowired
+	private Usuario usuario;
+	
 	@GetMapping("/usuario")
 	public String usuarioIndex(Model model) {
-//		Usuario usuario = new Usuario(null, null, null);
 		model.addAttribute("titulo", "Formulario de Usuarios");
-//		model.addAttribute("usuario",usuario);
+		model.addAttribute("usuario",usuario);
 		return "usuario/index";
 	}
 	

@@ -16,11 +16,6 @@ import com.ingenieriaweb.springboot.form.app.models.domain.Usuario;
 @Configuration
 public class AppConfig {
 
-    
-    
-
-    
-
     @Bean("Autor")
     public List<Autor> registrarA(){
         Autor autor1 = new Autor("A01","juan jose perez");
@@ -65,13 +60,11 @@ public class AppConfig {
     return Arrays.asList(prestamo1,prestamo2);
     }
 
-    @Bean("Usuario")
-    public List<Usuario> listaUsuarios(){
-    Usuario usuario1= new Usuario("leandro","av los laureles","953168423", listaPrestamos());
-    
-    return Arrays.asList(usuario1);
-    }
-
-
+//    @Bean("Usuario")
+//    public List<Usuario> listaUsuarios(){
+//    Usuario usuario1= new Usuario("leandro","av los laureles","953168423", listaPrestamos());
+//    
+//    return Arrays.asList(usuario1);
+//    }
 
 }
