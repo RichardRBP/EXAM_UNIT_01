@@ -46,11 +46,4 @@ public class PrestamoController {
 		return "prestamo/resultado";
 }
 
-	
-
-
-
-
-
-
 }
