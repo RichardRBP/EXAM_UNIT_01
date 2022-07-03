@@ -17,7 +17,7 @@ public class Libro {
 	private String isbn;
 	@NotEmpty
 	private String editorial;
-	@NotEmpty
+	
 	private Integer nroPaginas;
 	@Autowired
 	List<DetalleAutor>Item;

@@ -22,6 +22,7 @@ public class LibroController {
 	public String libroIndex(Model model) {
         Libro libro = new Libro(null, null,null, null,null, null);
 		model.addAttribute("titulo", "Formulario de Libros");
+        model.addAttribute("autor",  AppConfig.listaAutor()); 
 		model.addAttribute("libro", libro);
 		return "libro/index";
 	}
@@ -29,13 +30,13 @@ public class LibroController {
 	@PostMapping("/app/libro")
 	public String procesarLibro(@Valid Libro libro, BindingResult result, Model model) {
 		model.addAttribute("titulo", "Resultado Formulario Libro");
-		model.addAttribute("prestamos",  AppConfig.listaAutores()); 
-        model.addAttribute("prestamos",  AppConfig.listaAutor()); 
+		model.addAttribute("autores",  AppConfig.listaAutores()); 
+        model.addAttribute("autor",  AppConfig.listaAutor()); 
 		if (result.hasErrors()) {
 
-			return "autor/index";
+			return "libro/index";
 		}
 		model.addAttribute("libro", libro);
-		return "autor/resultado";
+		return "libro/resultado";
 	}
 }
