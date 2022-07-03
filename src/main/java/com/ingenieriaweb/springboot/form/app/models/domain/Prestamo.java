@@ -1,24 +1,22 @@
 package com.ingenieriaweb.springboot.form.app.models.domain;
-
-//import javax.validation.constraints.Future;
 import javax.validation.constraints.NotEmpty;
-//import javax.validation.constraints.Past;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Prestamo {
 
 	@Autowired
 	private Ejemplar ejemplar;
-	//@Past
 	@NotEmpty
 	private String fechaPrestamo;
-	//@Future
 	@NotEmpty
 	private String fechaDevolucion;
 	
 	 
-	public Prestamo(Ejemplar ejemplar, String fechaPrestamo, String fechaDevolucion) {
+	 
+	public Prestamo(Ejemplar ejemplar, @NotEmpty String fechaPrestamo, @NotEmpty String fechaDevolucion) {
+		this.ejemplar = ejemplar;
+		this.fechaPrestamo = fechaPrestamo;
+		this.fechaDevolucion = fechaDevolucion;
 	}
 	public Ejemplar getEjemplar() {
 		return ejemplar;

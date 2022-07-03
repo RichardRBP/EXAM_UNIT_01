@@ -24,7 +24,6 @@ public class AppConfig {
     @Bean("Autor")
     public static List<Autor> registrarA(){
         Autor autor1 = new Autor("A01","juan jose perez");
-
         Autor autor2 = new Autor("02","carlos mendez");
     return Arrays.asList(autor1,autor2);
     }
@@ -45,20 +44,27 @@ public class AppConfig {
     return Arrays.asList(libro1);
     }
 
-     @Bean("Ejemplar")
-    public static List<Ejemplar> listaEjemplares(){
+     @Bean("Ejemplar1")
+    public static List<Ejemplar> listaEjemplares1(){
         Libro libro1 = new Libro("L01","ciencias","isb1","santillana",200,listaAutores());
-        Ejemplar ejemplar1 = new Ejemplar(libro1,"E01","Biblioteca");
-        Ejemplar ejemplar2 = new Ejemplar(libro1,"E02","Biblioteca");
+        Ejemplar ejemplar1 = new Ejemplar(libro1,"E01 ciencias","Biblioteca");
+        Ejemplar ejemplar2 = new Ejemplar(libro1,"E01 ciencias","Biblioteca");
        
     return Arrays.asList(ejemplar1,ejemplar2);
+    }
+    @Bean("Ejemplar")
+    public static List<Ejemplar> listaEjemplares(){
+        Libro libro1 = new Libro("L01","ciencias","isb1","santillana",200,listaAutores());
+        Ejemplar ejemplar1 = new Ejemplar(libro1,"E01 ciencias","Biblioteca");
+        Ejemplar ejemplar2 = new Ejemplar(libro1,"E02 ciencias","Biblioteca");
+        return Arrays.asList(ejemplar1,ejemplar2);
     }
     @Bean("itemsPrestamo")
     public static List<Prestamo> listaPrestamos(){
         Libro libro1 = new Libro("L01","ciencias","isb1","santillana",200,listaAutores());
     
-        Ejemplar ejemplar1 = new Ejemplar(libro1,"E01","Biblioteca");
-        Ejemplar ejemplar2 = new Ejemplar(libro1,"E02","Biblioteca");
+        Ejemplar ejemplar1 = new Ejemplar(libro1,"E01 ciencias","Biblioteca");
+        Ejemplar ejemplar2 = new Ejemplar(libro1,"E01 ciencias","Biblioteca");
    
         Prestamo prestamo1= new Prestamo(ejemplar1,"02/07/2022","22/07/2022");
         Prestamo prestamo2= new Prestamo(ejemplar2,"02/07/2022","25/07/2022");
@@ -68,7 +74,8 @@ public class AppConfig {
     @Bean("Usuario")
     public static List<Usuario> listaUsuarios(){
     Usuario usuario1= new Usuario("U01","leandro","av los laureles","953168423", listaPrestamos());
-    return Arrays.asList(usuario1);
+    Usuario usuario2= new Usuario("U02","juanjose","av la llegada","65327819", listaPrestamos());
+    return Arrays.asList(usuario1,usuario2);
     }
 
 
