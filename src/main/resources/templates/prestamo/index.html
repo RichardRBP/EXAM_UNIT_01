@@ -33,38 +33,21 @@
             </div>
           <!--   <div th:if="${#fields.hasErrors('usuario')}" th:errors="*{usuario}"></div>    th:field="${libro.DetalleAutor}" th:each="course :${listaLibros}" th:value="${libro.codigoLibro}" th:text="${libro.titulo}"-->
         </div>
-         
           
-        <br>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <label class="input-group-text" for="libro">Libro</label>
-            </div>
-            <div class="col-12 col-md-6">
-                <select class="form-select" id="libro"    >
-                    <option selected disabled>seleccione un Libro</option>
-                    <option th:each="libro :${libros}" th:value="${libro.codigoLibro}" th:text="${libro.titulo}"> </option>
-                     
-                </select>
-                
-               <!-- <input class="form-control" type="text" id="libro">   th:field="*{Libro}" -->
-            </div>
-            <!--  <div th:if="${#fields.hasErrors('Libro')}" th:errors="*{Libro}"></div>-->
-        </div>
         <br>
         <div class="row">
             <div class="col-12 col-md-6">
                 <label class="input-group-text" for="ejemplar">ejemplar</label>
             </div>
             <div class="col-12 col-md-6">
-                <select class="form-select"  id="ejemplar"   >
+                <select class="form-select"  id="ejemplar"  th:object="${ejemplar}" >
                     <option selected disabled>seleccione un Ejemplar</option>
-                    <option th:each="ejemplar :${ejemplares}" th:value="${ejemplar.codigoEjemplar}" th:text="${ejemplar.localizacion}"> </option>
-                    <option value="ejemplar3">ejemplar3</option>
+                    <option th:each="ejemplar :${ejemplares}" th:value="${ejemplar.codigoEjemplar}" th:text="${ejemplar.codigoEjemplar}"> </option>
+                    
                 </select>
               <!--    <input class="form-control" type="text" id="ejemplar" >th:field="*{ejemplar}" -->
             </div>
-           <!-- <div th:if="${#fields.hasErrors('ejemplar')}" th:errors="*{ejemplar}"></div> -->
+            <div th:if="${#fields.hasErrors('ejemplar')}" th:errors="*{ejemplar}"></div><!-- -->
         </div>
         <br>
         <div class="row">
