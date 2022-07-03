@@ -8,6 +8,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ingenieriaweb.springboot.form.app.AppConfig;
 import com.ingenieriaweb.springboot.form.app.models.domain.Ejemplar;
 
 @Controller
@@ -18,6 +20,7 @@ public class EjemplarController {
 		Ejemplar ejemplar = new Ejemplar(null, null, null);
 		model.addAttribute("titulo", "EXAMEN INGENIERIA WEB");
 		model.addAttribute("ejemplar", ejemplar);
+		model.addAttribute("libros",AppConfig.listaLibros());
 		return "ejemplar/index";
 	}
 	

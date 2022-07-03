@@ -15,16 +15,13 @@ public class Ejemplar {
 	@NotEmpty
 	private String localizacion;
 	
-	
-	 
-    
     public Ejemplar(Libro libro, @NotEmpty @Size(min = 3, max = 10) String codigoEjemplar,
 			@NotEmpty String localizacion) {
 		this.libro = libro;
 		this.codigoEjemplar = codigoEjemplar;
 		this.localizacion = localizacion;
 	}
-	
+
 	public Libro getLibro() {
 		return libro;
 	}

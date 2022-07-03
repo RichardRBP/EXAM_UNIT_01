@@ -9,6 +9,7 @@
 </head>
 <body>
 <h1  style="color:aliceblue" th:text=${titulo}> </h1>
+
     <form th:action="@{/app/ejemplar}" th:object="${ejemplar}" method="post">
         <div>
             <label class="input-group-text" for="codigoEjemplar">CODIGO</label>
@@ -24,10 +25,15 @@
             </div>
             <div style="color:aliceblue" th:if="${#fields.hasErrors('localizacion')}" th:errors="*{localizacion}"></div>
         </div>
-        <div>
-            <label class="input-group-text" for="libro">LIBRO</label>
-            <div>
-                <input class="form-control" type="text" id="libro">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <label class="input-group-text" for="libro">Libro</label>
+            </div>
+            <div class="col-12 col-md-6">
+                <select class="form-select" id="libro"    >
+                    <option selected disabled>seleccione un Libro</option>
+                    <option th:each="libro :${libros}" th:value="${libro.codigoLibro}" th:text="${libro.titulo}"> </option>        
+                </select>
             </div>
         </div>
         <br>
