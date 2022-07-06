@@ -15,9 +15,9 @@
 <body>
 	<div class="container-fluid">
 		<br>
-		<div class="row">
+		<div class="row" >
 			<div class="col" style="text-align: center;">
-				<h1 th:text=${titulo} style="color: aliceblue;"></h1>
+				<h1 th:text=${titulo} style="color: aliceblue;" ></h1>
 				</h1>
 			</div>
 		</div>
@@ -54,9 +54,14 @@
 			<br>
 			<div class="row">
 				<div class="col-4"></div>
-				<div class="col-4" style="text-align: center;">
+				<div class="col-2" style="text-align: center;">
 					<input class="btn btn-outline-success" type="submit" value="enviar"
 						id="submit" />
+				</div>
+				<div class="col-2" style="text-align: center;">
+					
+						 <a href="/app" style="border-radius: 5px;" class="btn btn-outline-danger"> <i class="fas fa-ban"></i> Volver</a>
+               
 				</div>
 			</div>
 		</form>
